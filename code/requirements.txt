@@ -1,0 +1,11 @@
+# Pip-compatible install for graders without uv:
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r code/requirements.txt
+#
+# Versions pinned to match uv.lock (the exact, fully-resolved source of truth).
+# Recommended Python: 3.10–3.12 (see .python-version / pyproject.toml).
+google-genai==2.8.0
+python-dotenv==1.2.2
+pillow==12.2.0
+pydantic==2.13.4
+rich==15.0.0

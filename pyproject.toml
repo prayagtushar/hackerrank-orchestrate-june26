@@ -1,0 +1,27 @@
+[project]
+name = "orchestrate-evidence-review"
+version = "1.0.0"
+description = "Multi-modal damage-claim evidence verification (HackerRank Orchestrate)"
+readme = "code/README.md"
+# Pinned below 3.13 so uv provisions a Python with prebuilt wheels for
+# pydantic-core / pillow (the host system runs 3.14, which lacks some wheels).
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "google-genai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pillow>=10.0.0",
+    "pydantic>=2.0",
+    "rich>=13.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["code/tests"]
+pythonpath = ["code"]
+
+[tool.uv]
+package = false

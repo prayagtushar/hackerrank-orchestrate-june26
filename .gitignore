@@ -1,0 +1,8 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+code/.vlm_cache.json
+# uv.lock is intentionally committed for reproducibility.
